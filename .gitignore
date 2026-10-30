@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.streamlit/secrets.toml
+datos_local/
+respaldo_horas/
+*.xlsx
+*.db
+.DS_Store

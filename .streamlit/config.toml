@@ -1,0 +1,10 @@
+# Colores de la app (paleta TIMER: rojo del logo, azul marino de TMR)
+[theme]
+base = "light"
+primaryColor = "#ED1F24"
+backgroundColor = "#F7F7F5"
+secondaryBackgroundColor = "#ECEEF2"
+textColor = "#1B263D"
+
+[client]
+toolbarMode = "minimal"
