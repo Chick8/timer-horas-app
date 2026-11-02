@@ -80,12 +80,13 @@ python3 -m unittest discover tests
 
 ## Pasarla a la nube (para que todo el equipo la use desde el celular)
 
-1. En Supabase crea un **proyecto nuevo** (por ejemplo «timer-horas»; región São Paulo). Guarda la contraseña de la base de datos.
+1. En Supabase crea una **organización nueva** (ej. «TIMER», plan Free) y dentro un **proyecto** «timer-horas» (región São Paulo). Guarda la contraseña de la base de datos.
 2. Supabase → SQL Editor → New query → pega todo `basedatos/crear_base_de_datos.sql` → **Run**.
-3. En la Terminal: `python3 crear_secretos.py` (te pregunta los datos de Supabase y tu contraseña de administración).
+3. En la Terminal: `python3 crear_secretos.py` (te pide los datos de Supabase y tu usuario y contraseña de administración).
 4. `python3 probar_conexion.py` → debe terminar en **TODO OK**.
-5. `streamlit run app.py` → ya no aparece el aviso de modo prueba. Las categorías y productos se cargan solos.
-6. Subir a GitHub y Streamlit Cloud (igual que la app de asistencia) y pegar el contenido de `secrets.toml` en Settings → Secrets.
+5. `python3 migrar_a_supabase.py` → copia tus datos de la Mac a Supabase (escribe COPIAR para confirmar). Tu base local no se toca.
+6. En share.streamlit.io → **Create app** → repositorio `Chick8/timer-horas-app`, rama `main`, archivo `app.py`. En **Advanced settings → Secrets** pega el contenido de `.streamlit/secrets.toml` (ábrelo con `open -e .streamlit/secrets.toml`). **Deploy**.
+7. Cada cambio futuro: `git add . && git commit -m "cambio" && git push` y Streamlit Cloud se actualiza solo.
 
 ## Qué hay en esta carpeta
 
